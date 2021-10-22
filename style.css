@@ -1,0 +1,149 @@
+/* Allgemeines - Klassenunabhängiges Styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Fira Sans', sans-serif;
+  padding: 50px;
+  background-color: #e6ffed;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+section {
+  display: block;
+  float: none;
+  clear: both;
+  padding: 20px;
+  border-bottom: 3px dashed #8ac99d;
+}
+section:last-child {
+  border-bottom: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: #e6ffed;
+  border: 2px outset #8ac99d;
+  border-radius: 3px;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out 0s;
+}
+
+button:hover {
+  background-color: #d1fcdd;
+}
+
+
+/* Layout */
+.master-container {
+  width: 90%;
+  max-width: 1400px;
+  display: block;
+  margin: auto;
+  padding: 30px;
+  box-shadow: 0px 10px 20px 0px #8ac99d;
+  background-color: #fff;
+}
+
+
+/* Bildergalerie */
+.galerie-container {
+  display: flex;
+}
+
+.img-wrap {
+  width: 25%;
+  border: 2px solid #8ac99d;
+  /* box-shadow: 0px 10px 20px -5px rgba(0,0,0,.2); */
+  margin: 1%;
+  padding: 1%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.img-wrap p {
+  margin: 15px 10px 0px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: none;
+}
+
+.img-wrap button {
+  display: none;
+}
+
+.lightbox {
+  width: 80%;
+  height: 80vh;
+  position: fixed;
+  top: 50px;
+  left: 10%;
+  margin: 0px;
+  box-shadow: 0px 0px 1500px 1500px #c0eecd8e;
+  max-height: none;
+  text-align: center;
+  z-index: 10000;
+}
+
+.lightbox img {
+  max-height: 85%;
+}
+
+.lightbox p,
+.lightbox button {
+  display: inline-block;
+}
+
+/* Farbwechsel */
+.farbwechsel-ziel {
+  width: 100%;
+  height: 60px;
+  margin: 10px 0px;
+}
+
+.gruen {
+  background-color: #b8e7c6;
+}
+
+.blau {
+  background-color: #4f79b1;
+}
+
+
+/* Aus- und Einklappen */
+.ausklapp-element {
+  border: 1px solid #afafaf;
+  margin-bottom: 10px;
+}
+
+.ausklapp-titel {
+  margin: 0px;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #b8e7c6;
+  transition: all .3s ease-in-out;
+}
+
+.ausklapp-titel:hover {
+  background-color: #8ac99d;
+}
+
+/* Rotation */
+.rotated {
+  transform: rotate(180deg);
+}
+
+/* kleine Helfer */
+.clearfix {
+  float: none;
+  clear: both;
+}
